@@ -1,8 +1,8 @@
 <template>
   <div v-if="user.address.value" class="user-info">
-    <!-- <div class="user-info__title">Your Address: </div> -->
+    <div class="user-info__title">Wallet successfully connected!</div>
     <div class="user-info__item user-info__address">
-      {{ user.address.value }}
+      <span>Your address:</span> {{ user.address.value }}
     </div>
   </div>
 </template>
@@ -30,5 +30,16 @@ export default defineComponent({
     font-size: 16px;
     color: white;
     text-align: center;
+  }
+
+  .user-info__title {
+    margin-bottom: 12px;
+    color: green;
+    font-weight: 500;
+    font-size: 24px;
+  }
+
+  span {
+    font-weight: 700;
   }
 </style>
